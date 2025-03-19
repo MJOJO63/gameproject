@@ -19,7 +19,8 @@ public class PlayerScript : MonoBehaviour
     //We use this one to show our score.
     public TextMeshPro ScoreText;
     public TextMeshPro HealthText;
-    
+    public TextMeshPro ControlText;
+
     //This will control how fast the player moves
     public float Speed = 4;
     
@@ -134,6 +135,7 @@ public class PlayerScript : MonoBehaviour
         //If it does, run the code block belows
         if (coin != null)
         {
+            ControlText.text = "";
             //Tell the coin that you bumped into them so they can self destruct or whatever
             coin.GetBumped();
             //Make your score variable go up by one. . .
